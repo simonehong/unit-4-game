@@ -1,0 +1,17 @@
+.jumbotron{
+    max-width: 200px;
+}
+
+div {
+    max-width: 500px;
+    background-color: burlywood;
+}
+
+p{
+    padding-bottom: 100px;
+
+}
+.crystal-image {
+    width: 125px;
+    height: 125px;
+  }

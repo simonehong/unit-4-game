@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Cyrstal Collector</title>
+</head>
+<div class="jumbotron">
+    <div>
+    <h2>Crystal Collector</h2>
+    </div>
+
+</div>
+
+<!-- Displays game directions -->
+
+<div>
+    <p>You will be given a random number at the beginning of game.</p>
+    <p>There are four crystals below. By clicking on a crystal you
+    will add a specific about of points to your total score.
+    </p>
+    <p>You will the game by matching your total score to random
+    number, you lose the game if your total scores goes above
+    the random number.
+    </p>
+    <p>The value of each crystal is hidden from you until you
+    click on it.
+    </p>
+    <p>Each time when the game starts, the gaem will change
+    the values of each cyrstal.
+    </p>
+</div>
+<body>
+    <h1>Total Number: <span id="totalNumber"></span></h1>
+    <div id="crystals">
+    </div>
+     
+    <script type="text/javascript" src="assets/javascript/games.js"></script>
+    <br><br>
+    <div>
+        <h1 id="totalScore">Total Score:</h1>
+        <br>
+    </div> 
+    <div>
+            
+            <h1 id="wins">Wins:</h1>
+            <h1 id="loss">Losses:</h1>
+    </div>
+    
+</body>
+</html>
