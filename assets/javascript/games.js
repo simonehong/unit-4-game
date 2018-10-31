@@ -1,5 +1,5 @@
   //Randomly generate letter
-  
+   
   var targetNumber = function(){
     targetNumber = [Math.floor(Math.random() * 101) +19];
     targetNumber = parseInt(targetNumber);
@@ -17,18 +17,20 @@ targetNumber();
   var counter = 0;
   var wins = 0;
   var loss = 0;
- 
+   
 
 // Now for the hard part. Creating multiple crystals each with their own unique number value.
 
 // Next we create a for loop to create crystals for every numberOption.
 
-for (var i = 1; i < 5; i++) {
+var createCrystals = function(){
+  $("#crystals").empty();
+  for (var i = 1; i < 5; i++) {
 
 
   var numberOptions = function() {
-     numberOptions = [Math.floor(Math.random() * 12)+ 1];
-   return numberOptions;
+    numberOptions = [Math.floor(Math.random() * 12)+ 1];
+    return numberOptions;
   }
 
     // For each iteration, we will create an imageCrystal
@@ -48,9 +50,17 @@ for (var i = 1; i < 5; i++) {
 
   // Lastly, each crystal image (with all it classes and attributes) will get added to the page.
   $("#crystals").append(imageCrystal);
+  
+  }
 }
 
+
+createCrystals();
+
 // This time, our click event applies to every single crystal on the page. Not just one.
+var score = function(){
+  $("#totalScore").empty();
+
 $(".crystal-image").on("click", function() {
 
   // Determining the crystal's value requires us to extract the value from the data attribute.
@@ -63,30 +73,48 @@ $(".crystal-image").on("click", function() {
   // We then add the crystalValue to the user's "counter" which is a global variable.
   // Every click, from every crystal adds to the global counter.
   counter += crystalValue;
-  
-  $("#totalScore").text("Your score is: " + counter)
+
+ $("#totalScore").text("Your score is: " + counter)
   console.log(counter);
-  
+
+
+
+// Keep track of wins and losses
   if (counter === targetNumber) {
     wins++;
-   console.log(wins)
+    alert("You win");
     $("#wins").text("Wins: " + wins);
     reset();
-   
-    }
+  }
    
    else if (counter > targetNumber) {
-     loss++;
+    loss++;
+    alert("You Lost") ;
      $("#loss").text("Lose: " + loss);
-     reset();
-      }
+    reset();
+    
+    } 
 
-     
+
+  
 });
- 
+}
+score();
+
+
+//reset targetNumber and counter
 var reset = function(){
   targetNumber = [Math.floor(Math.random() * 101) +19];
   $("#totalNumber").text(targetNumber);
 
+  createCrystals();
+  score();
+  $("#totalScore").text("Total Score: ")
+  
+  counter = 0;
+
+ 
+
 
 }
+
