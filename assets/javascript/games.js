@@ -82,15 +82,15 @@ $(".crystal-image").on("click", function() {
 // Keep track of wins and losses
   if (counter === targetNumber) {
     wins++;
-    alert("You win");
     $("#wins").text("Wins: " + wins);
+    alert("You win");
     reset();
   }
    
    else if (counter > targetNumber) {
     loss++;
-    alert("You Lost") ;
-     $("#loss").text("Lose: " + loss);
+    $("#loss").text("Lose: " + loss);
+    alert("You Lost");
     reset();
     
     } 
