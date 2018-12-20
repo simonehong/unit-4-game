@@ -1,1 +1,2 @@
 # unit-4-game
+Created game where there are 4 crystals all with randomly generated number between 1 and 5.  The application then randomly selects the number you want to reach. You have 9 chances to select the cyrstals that equal the randomly selected value.
